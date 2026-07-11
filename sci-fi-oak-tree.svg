@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="50%" stop-color="#00ccff"/>
+      <stop offset="100%" stop-color="#0066ff"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="30%" stop-color="#00ffcc"/>
+      <stop offset="60%" stop-color="#0088ff"/>
+      <stop offset="100%" stop-color="#6600ff"/>
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1a2e"/>
+      <stop offset="60%" stop-color="#060d18"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+    <radialGradient id="ringGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0,255,136,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,255,136,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)" rx="80"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="200" cy="210" r="165" fill="url(#ringGrad)" opacity="0.5"/>
+
+  <!-- Circuit rings -->
+  <circle cx="200" cy="210" r="140" fill="none" stroke="#00ff88" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="200" cy="210" r="120" fill="none" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Background stars/dots -->
+  <g fill="#00ff88" opacity="0.2">
+    <circle cx="50" cy="60" r="1"/><circle cx="340" cy="45" r="1.2"/>
+    <circle cx="80" cy="340" r="0.8"/><circle cx="320" cy="350" r="1"/>
+    <circle cx="30" cy="200" r="0.6"/><circle cx="370" cy="180" r="0.8"/>
+    <circle cx="60" cy="120" r="0.5"/><circle cx="350" cy="80" r="0.7"/>
+    <circle cx="100" cy="380" r="0.6"/><circle cx="300" cy="40" r="0.5"/>
+  </g>
+
+  <!-- ===== TREE ROOTS (sci-fi circuit style) ===== -->
+  <g filter="url(#glow)">
+    <!-- Left roots -->
+    <path d="M190 340 Q170 350 150 355 Q140 358 130 365" fill="none" stroke="#00ccff" stroke-width="2" opacity="0.6"/>
+    <path d="M185 345 Q160 360 140 370" fill="none" stroke="#00ccff" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="130" cy="365" r="2" fill="#00ff88" filter="url(#glow)"/>
+    <!-- Right roots -->
+    <path d="M210 340 Q230 350 250 355 Q260 358 270 365" fill="none" stroke="#00ccff" stroke-width="2" opacity="0.6"/>
+    <path d="M215 345 Q240 360 260 370" fill="none" stroke="#00ccff" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="270" cy="365" r="2" fill="#00ff88" filter="url(#glow)"/>
+    <!-- Center root -->
+    <path d="M200 345 Q200 360 200 375" fill="none" stroke="#00ccff" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- ===== TREE TRUNK (cyber/mechanical) ===== -->
+  <g filter="url(#glow)">
+    <!-- Main trunk -->
+    <path d="M185 340 L188 270 Q190 240 195 220 L200 200 L205 220 Q210 240 212 270 L215 340 Z"
+          fill="url(#trunkGrad)" opacity="0.9"/>
+    <!-- Trunk circuit lines -->
+    <line x1="192" y1="280" x2="208" y2="280" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+    <line x1="190" y1="300" x2="210" y2="300" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+    <line x1="193" y1="320" x2="207" y2="320" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+    <!-- Trunk nodes -->
+    <circle cx="200" cy="280" r="3" fill="#00ff88"/>
+    <circle cx="200" cy="300" r="2.5" fill="#00ff88"/>
+    <circle cx="200" cy="320" r="2" fill="#00ff88"/>
+  </g>
+
+  <!-- ===== BRANCHES ===== -->
+  <g filter="url(#glow)">
+    <!-- Left branch 1 -->
+    <path d="M192 250 Q160 230 130 215 Q120 210 110 205" fill="none" stroke="url(#trunkGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Left branch 2 -->
+    <path d="M190 265 Q155 260 125 255 Q110 253 95 250" fill="none" stroke="url(#trunkGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right branch 1 -->
+    <path d="M208 250 Q240 230 270 215 Q280 210 290 205" fill="none" stroke="url(#trunkGrad)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Right branch 2 -->
+    <path d="M210 265 Q245 260 275 255 Q290 253 305 250" fill="none" stroke="url(#trunkGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Top branches -->
+    <path d="M197 225 Q185 200 170 175 Q160 160 150 145" fill="none" stroke="url(#trunkGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M203 225 Q215 200 230 175 Q240 160 250 145" fill="none" stroke="url(#trunkGrad)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M200 210 Q200 185 200 160 Q200 145 200 130" fill="none" stroke="url(#trunkGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Sub-branches -->
+    <path d="M170 175 Q155 165 140 155" fill="none" stroke="#00ccff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M230 175 Q245 165 260 155" fill="none" stroke="#00ccff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M200 160 Q185 145 170 135" fill="none" stroke="#00ccff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M200 160 Q215 145 230 135" fill="none" stroke="#00ccff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- ===== LEAF NODES (hexagonal/digital particles) ===== -->
+  <g filter="url(#glow)">
+    <!-- Canopy layer 1 - outer -->
+    <circle cx="110" cy="205" r="6" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="110" cy="205" r="3" fill="#00ff88"/>
+    <circle cx="95" cy="250" r="5" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="95" cy="250" r="2.5" fill="#00ff88"/>
+    <circle cx="290" cy="205" r="6" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="290" cy="205" r="3" fill="#00ff88"/>
+    <circle cx="305" cy="250" r="5" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="305" cy="250" r="2.5" fill="#00ff88"/>
+
+    <!-- Canopy layer 2 - mid -->
+    <circle cx="140" cy="155" r="7" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="140" cy="155" r="3.5" fill="#00ff88"/>
+    <circle cx="260" cy="155" r="7" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="260" cy="155" r="3.5" fill="#00ff88"/>
+    <circle cx="170" cy="135" r="6" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="170" cy="135" r="3" fill="#00ff88"/>
+    <circle cx="230" cy="135" r="6" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="230" cy="135" r="3" fill="#00ff88"/>
+
+    <!-- Canopy layer 3 - inner -->
+    <circle cx="200" cy="130" r="8" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="200" cy="130" r="4" fill="#00ff88"/>
+    <circle cx="175" cy="155" r="5" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="175" cy="155" r="2.5" fill="#00ff88"/>
+    <circle cx="225" cy="155" r="5" fill="none" stroke="url(#leafGrad)" stroke-width="2"/>
+    <circle cx="225" cy="155" r="2.5" fill="#00ff88"/>
+
+    <!-- Extra floating particles -->
+    <circle cx="120" cy="180" r="2" fill="#00ffcc" opacity="0.6"/>
+    <circle cx="280" cy="180" r="2" fill="#00ffcc" opacity="0.6"/>
+    <circle cx="155" cy="145" r="2" fill="#00ffcc" opacity="0.6"/>
+    <circle cx="245" cy="145" r="2" fill="#00ffcc" opacity="0.6"/>
+    <circle cx="190" cy="120" r="1.5" fill="#00ffcc" opacity="0.5"/>
+    <circle cx="210" cy="120" r="1.5" fill="#00ffcc" opacity="0.5"/>
+  </g>
+
+  <!-- ===== CONNECTION LINES (circuit-like links between nodes) ===== -->
+  <g stroke="#00ff88" stroke-width="0.5" opacity="0.3">
+    <line x1="110" y1="205" x2="140" y2="155"/>
+    <line x1="290" y1="205" x2="260" y2="155"/>
+    <line x1="140" y1="155" x2="200" y2="130"/>
+    <line x1="260" y1="155" x2="200" y2="130"/>
+    <line x1="140" y1="155" x2="170" y2="135"/>
+    <line x1="260" y1="155" x2="230" y2="135"/>
+    <line x1="170" y1="135" x2="200" y2="130"/>
+    <line x1="230" y1="135" x2="200" y2="130"/>
+  </g>
+
+  <!-- ===== ANIMATED GLOW PULSE ===== -->
+  <circle cx="200" cy="210" r="170" fill="none" stroke="#00ff88" stroke-width="1" opacity="0.08">
+    <animate attributeName="r" values="160;175;160" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.05;0.12;0.05" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== HEXAGONAL ACORN FRUIT (sci-fi core) ===== -->
+  <g filter="url(#softGlow)">
+    <polygon points="200,95 207,98 207,105 200,108 193,105 193,98"
+             fill="none" stroke="#00ff88" stroke-width="1.5"/>
+    <circle cx="200" cy="101.5" r="2" fill="#00ff88"/>
+  </g>
+
+  <!-- Border corners -->
+  <g stroke="#00ff88" stroke-width="1.5" opacity="0.3" fill="none">
+    <path d="M20 20 L60 20 M20 20 L20 60"/>
+    <path d="M380 20 L340 20 M380 20 L380 60"/>
+    <path d="M20 380 L60 380 M20 380 L20 340"/>
+    <path d="M380 380 L340 380 M380 380 L380 340"/>
+  </g>
+</svg>
