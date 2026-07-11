@@ -647,10 +647,10 @@
             <a href="#projects" class="btn-outline magnetic-btn">↓ View My Work</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><div class="num">3+</div><div class="label">Portfolio Projects</div></div>
-            <div class="hero-stat"><div class="num">Python</div><div class="label">Core Stack</div></div>
+            <div class="hero-stat"><div class="num">3</div><div class="label">Projects Built</div></div>
+            <div class="hero-stat"><div class="num">Live</div><div class="label">Custom Domain</div></div>
             <div class="hero-stat"><div class="num">FastAPI</div><div class="label">Backend Framework</div></div>
-            <div class="hero-stat"><div class="num">100%</div><div class="label">Client Satisfaction</div></div>
+            <div class="hero-stat"><div class="num">Git</div><div class="label">Version Control</div></div>
         </div>
     </div>
 </section>
@@ -763,32 +763,36 @@
 <!-- ── Projects ───────────────────────── -->
 <section id="projects">
     <div class="section-label">Portfolio</div>
-    <h2 class="section-title">Recent <span class="gradient">Work</span></h2>
+    <h2 class="section-title">What I've <span class="gradient">Built</span></h2>
+
+    <div class="project-card tilt-card">
+        <div class="tilt-content">
+            <span class="tag">Web Development</span>
+            <h3>Portfolio Website & Custom Domain</h3>
+            <p>This very site! Designed from scratch with interactive particle effects, 3D tilt cards, magnetic buttons, custom cursor, and a loading screen. Deployed to GitHub Pages with a purchased custom domain (<strong>oaktreeservices.net</strong>) via DreamHost DNS configuration — A records and CNAME pointing to GitHub's infrastructure.</p>
+            <div class="tech">HTML/CSS/JS · GitHub Pages · DreamHost DNS · Custom Domain</div>
+            <div style="margin-top:12px;">
+                <a href="https://oaktreeservices.net" target="_blank" style="color:var(--primary);font-size:13px;text-decoration:none;font-weight:600;">🌐 View Live →</a>
+                <a href="https://github.com/Oaktree96/portfolio" target="_blank" style="color:var(--accent2);font-size:13px;text-decoration:none;font-weight:600;margin-left:20px;">&lt;/&gt; Source Code</a>
+            </div>
+        </div>
+    </div>
 
     <div class="project-card tilt-card">
         <div class="tilt-content">
             <span class="tag">Full-Stack Web App</span>
             <h3>Skincare Booking Dashboard</h3>
-            <p>A complete booking management system for a medical aesthetics business. Manages services (facials, Botox, fillers), client bookings, and provides real-time business analytics with charts and revenue tracking.</p>
-            <div class="tech">FastAPI · SQLite · HTML/CSS/JS · Charts</div>
+            <p>A complete booking management system for a medical aesthetics business. Built with FastAPI and SQLite, managing services (facials, Botox, fillers), client bookings, and providing real-time business analytics with revenue tracking and service popularity insights.</p>
+            <div class="tech">FastAPI · SQLite · HTML/CSS/JS · Pydantic · REST API</div>
         </div>
     </div>
 
     <div class="project-card tilt-card">
         <div class="tilt-content">
-            <span class="tag">Automation</span>
-            <h3>Marketing Report Generator</h3>
-            <p>Automated campaign performance reports. Takes raw ad data and produces polished Excel reports with calculated metrics (CTR, conversion rates, cost per conversion) and charts.</p>
-            <div class="tech">Python · Pandas · OpenPyXL · Charts</div>
-        </div>
-    </div>
-
-    <div class="project-card tilt-card">
-        <div class="tilt-content">
-            <span class="tag">Data Processing</span>
-            <h3>Data Cleaning & Insight Pipeline</h3>
-            <p>Processes messy business data into clean, structured formats. Handles missing values, duplicates, and generates summary statistics automatically.</p>
-            <div class="tech">Python · Pandas · CSV/Excel</div>
+            <span class="tag">Infrastructure</span>
+            <h3>Domain & DNS Configuration</h3>
+            <p>Purchased and configured <strong>oaktreeservices.net</strong> on DreamHost, pointing it to GitHub Pages. Set up 4 A records for the root domain and a CNAME for www subdomain. Configured Git with professional identity and deployed via GitHub workflow.</p>
+            <div class="tech">DNS · DreamHost · GitHub Pages · Git · CLI</div>
         </div>
     </div>
 </section>
